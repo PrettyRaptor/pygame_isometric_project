@@ -43,7 +43,7 @@ class Tile(pygame.sprite.Sprite):
         print(f"X_c: {self.rect.center[0]}, Y_c: {self.rect.center[1]}", end="|")
 
     def is_mouse_over(self, mouse_position):
-        ### возвращает курсор попал в прямоугольник тайл -> возвращает координаты центра этого тайла и относительные координаты тайла
+        ### возвращает координаты курсора при попадании его в прямоугольник тайла -> возвращает координаты центра этого тайла и относительные координаты тайла
 
         if self.selection_rect.collidepoint(mouse_position[0], mouse_position[1]):
             rect_center = (self.selection_rect_center[0], self.selection_rect_center[1] - self.rect.height / 4)
